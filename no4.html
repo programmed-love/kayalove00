@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>No Page 4</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(160, 227, 219);
+            align-items: center;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .button {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        button {
+            border-radius: 30%;
+            box-shadow: 2px 2px 5px black;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .yes-button {
+            background-color: blueviolet;
+            color: white;
+        }
+
+        .no-button {
+            background-color: brown;
+            color: white;
+        }
+
+        .yes-button:hover {
+            background-color: darkviolet;
+        }
+
+        .no-button:hover {
+            background-color: darkred;
+        }
+    </style>
+        
+</head>
+<body>
+
+    <div class="tenor-gif-embed" data-postid="20044353" 
+        data-share-method="host" data-aspect-ratio="1.52381" data-width="30%">
+        <a href="https://tenor.com/view/bed-time-gif-20044353">Bed Time Sticker</a> 
+        from <a href="https://tenor.com/search/bed-stickers">Bed Stickers</a>
+    </div> 
+
+    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+    <h1>Jaldi sey haaan bolo, warna mai ice cream nahi dungi! 🍦</h1>
+    <p>Meraa pyara baby soch lo! 😘</p>
+
+    <div class="button-container">
+        <a href="yes.html"><button class="yes-button">YES</button></a>
+        <button class="no-button" id="noButton">NO</button>
+    </div>
+
+    <script>
+        document.getElementById("noButton").addEventListener("mouseover", function() {
+            let currentLeft = this.offsetLeft;
+            let currentTop = this.offsetTop;
+
+            // Move within a bigger range (randomized)
+            let moveX = (Math.random() * 200 - 100); // Moves between -100px to +100px
+            let moveY = (Math.random() * 150 - 75);  // Moves between -75px to +75px
+
+            let newLeft = currentLeft + moveX;
+            let newTop = currentTop + moveY;
+
+            // Ensure the button doesn't go off-screen
+            let maxX = window.innerWidth - this.clientWidth;
+            let maxY = window.innerHeight - this.clientHeight;
+
+            if (newLeft < 0) newLeft = 5;
+            if (newTop < 0) newTop = 5;
+            if (newLeft > maxX) newLeft = maxX - 5;
+            if (newTop > maxY) newTop = maxY - 5;
+
+            this.style.position = "absolute";
+            this.style.left = newLeft + "px";
+            this.style.top = newTop + "px";
+        });
+    </script>
+
+</body>
+</html>
